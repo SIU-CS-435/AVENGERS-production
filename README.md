@@ -24,5 +24,5 @@ SIU853644380
 
 
 Sai Sharath Japa
-sharath.japa@siu.edu  
+sharath.japa@siu.edu
 SIU853651270
