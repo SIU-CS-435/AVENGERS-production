@@ -17,3 +17,7 @@ SIU853636837
 Raja Yerram
 raja.yerram@siu.edu
 SIU853646591
+
+Sneha Thota
+snehathota@siu.edu
+SIU853644380
