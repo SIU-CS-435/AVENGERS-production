@@ -32,6 +32,7 @@ namespace atm
             sc.MdiParent = this;
             sc.Show();
         }
+<<<<<<< HEAD
 		private void cANCELLATIONToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisposeAllButThis();
@@ -41,5 +42,15 @@ namespace atm
            
         }
 
+=======
+		 private void eDITPROFILEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisposeAllButThis();
+            EditProfile EP = new EditProfile(lbshwuser.Text);
+            EP.MdiParent = this;
+            EP.Show();
+           
+        }
+>>>>>>> origin/master
     }
 }
