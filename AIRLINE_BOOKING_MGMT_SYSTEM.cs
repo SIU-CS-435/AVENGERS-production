@@ -40,14 +40,23 @@ namespace atm
             EP.Show();
            
         }
-	private void BookingToolStripMenuItem_Click(object sender, EventArgs e)
+	private void AIRLINE_BOOKING_MGMT_SYSTEM_LOAD(object sender, EventArgs e)
         {
-            DisposeAllButThis();
-            Search sc = new Search(lbshwuser.Text);
-            sc.MdiParent = this;
-            sc.Show();
+            lbshwuser.Text = uname;
         }
-	
-
+        public void DisposeAllButThis()
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+                return;
+            }
+        }
+        private void lnklbLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            USER_LOGIN ul = new USER_LOGIN();
+            ul.Show();
+        }
     }
 }
