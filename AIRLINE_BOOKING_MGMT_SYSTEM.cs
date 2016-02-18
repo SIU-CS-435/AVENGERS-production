@@ -32,5 +32,13 @@ namespace atm
             sc.MdiParent = this;
             sc.Show();
         }
+		 private void eDITPROFILEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisposeAllButThis();
+            EditProfile EP = new EditProfile(lbshwuser.Text);
+            EP.MdiParent = this;
+            EP.Show();
+           
+        }
     }
 }
