@@ -71,7 +71,16 @@ namespace atm
                 return;
             }
         }
-	
+	private void lnklblogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            USER_LOGIN ul = new USER_LOGIN();
+            ul.Show();
+        }
+        private void AIRLINE_BOOKING_MGMT_SYSTEM_Load(object sender, EventArgs e)
+        {
+            lbshwuser.Text = uname;
+        }
 
     }
 }
