@@ -32,5 +32,14 @@ namespace atm
             sc.MdiParent = this;
             sc.Show();
         }
+		private void cANCELLATIONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisposeAllButThis();
+            atm.USER_FORMS.CancelFrm cf = new atm.USER_FORMS.CancelFrm(lbshwuser.Text,"");
+            cf.MdiParent = this;
+            cf.Show();
+           
+        }
+
     }
 }
