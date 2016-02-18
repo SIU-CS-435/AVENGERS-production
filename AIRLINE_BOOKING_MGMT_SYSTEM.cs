@@ -40,7 +40,7 @@ namespace atm
             EP.Show();
            
         }
-	private void bOOKINGToolStripMenuItem_Click(object sender, EventArgs e)
+	private void BookingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisposeAllButThis();
             Search sc = new Search(lbshwuser.Text);
