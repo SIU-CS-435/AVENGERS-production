@@ -47,6 +47,14 @@ namespace atm
             sc.MdiParent = this;
             sc.Show();
         }
+		private void BookedTicketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisposeAllButThis();
+            BOOKED_TICKET bt = new BOOKED_TICKET(lbshwuser.Text);
+            bt.MdiParent = this;
+            bt.Show();
+            
+        }
          private void CancellationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisposeAllButThis();
