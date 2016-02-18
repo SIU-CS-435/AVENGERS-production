@@ -63,6 +63,14 @@ namespace atm
             cf.Show();
            
         }
+        public void DisposeAllButThis()
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+                return;
+            }
+        }
 	
 
     }
