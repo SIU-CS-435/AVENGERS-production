@@ -40,3 +40,18 @@ namespace atm.USER_FORMS
                 dgviewbooked.Columns.Add(Editlink);
             }
         }
+  	private void dgviewbooked_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                DataGridViewRow row = dgviewbooked.CurrentCell.OwningRow;
+                CancelFrm cf = new CancelFrm(a, row.Cells["BookingId"].Value.ToString());
+                cf.MdiParent = this.MdiParent;
+                this.Close();
+                cf.Show();
+            }
+        }
+
+       
+    }
+}
