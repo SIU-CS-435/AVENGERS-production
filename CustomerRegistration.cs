@@ -137,3 +137,43 @@ namespace atm
                 valid = 2;
             }
         }
+	 private void tbpass_Leave(object sender, EventArgs e)
+        {
+            epass.Clear();
+            int pass_validate = bussiness_accesslayer.tbpass_Validating(tbpass.Text);
+            if (pass_validate == 1)
+            {
+                epass.SetError(tbpass, "Password should be alphanumeric with a  special character");
+                valid = 2;
+            } 
+        }
+
+        private void tbphone_Leave(object sender, EventArgs e)
+        {
+            ephone.Clear();
+            int phone_validate = bussiness_accesslayer.phone_validation(tbphone.Text);
+            if (phone_validate == 1)
+            {
+                ephone.SetError(tbphone, "Phone No must be numeric");
+                valid = 2;
+            }
+            if (phone_validate == 2)
+            {
+                ephone.SetError(tbphone, "Length must be 10");
+                valid = 2;
+            } 
+        }
+
+        private void tbssn_Leave(object sender, EventArgs e)
+        {
+            essn.Clear();
+            int ssn_validate = bussiness_accesslayer.ssn_validation(tbssn.Text);
+            if (ssn_validate == 1)
+            {
+                essn.SetError(tbssn, "SSN number already registered");
+                valid = 2;
+            } 
+        }
+
+        }
+}
