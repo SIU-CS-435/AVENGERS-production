@@ -1,4 +1,80 @@
-namespace atm
+
+Conversation opened. 1 read message.
+
+
+Skip to content
+Using Gmail with screen readers
+Raja
+1
+Search
+
+
+
+Take me to Inbox
+Gmail
+COMPOSE
+Labels
+Inbox
+Sent Mail
+Spam (105)
+Circles
+2-1 Material
+2-2 Material
+3-1 Material
+4-1 Material
+4-2 Material
+Junk
+Main Project
+ME
+OLX
+Useful
+More 
+Hangouts
+
+ 
+ 
+ 
+  More 
+1 of 2,169  
+ 
+Print all In new window
+(no subject)
+Inbox
+x 
+
+Sharath Chandra
+Attachments11:48 PM (5 minutes ago)
+
+to me 
+3 Attachments 
+ 
+Preview attachment Customer_Registration.cs
+
+Text
+Customer_Registration.cs
+Preview attachment Customer_Registration.Designer.cs
+
+Text
+Customer_Registration.Designer.cs
+Preview attachment Customer_Registration.resx
+
+
+Customer_Registration.resx
+	
+Click here to Reply or Forward
+3.27 GB (21%) of 15 GB used
+Manage
+Terms - Privacy
+Last account activity: 0 minutes ago
+Details
+Sharath Chandra's profile photo
+Sharath Chandra
+Add to circles
+
+Show details
+
+
+?namespace atm
 {
     partial class Customer_Registration
     {
@@ -60,6 +136,22 @@ namespace atm
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbhead1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnnext = new System.Windows.Forms.Button();
+            this.pnlnext = new System.Windows.Forms.Panel();
+            this.linklblrefresh = new System.Windows.Forms.LinkLabel();
+            this.tbcaptcha = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblcaptcha = new System.Windows.Forms.Label();
+            this.tbanswer3 = new System.Windows.Forms.TextBox();
+            this.tbanswer2 = new System.Windows.Forms.TextBox();
+            this.tbanswer1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbsecurity3 = new System.Windows.Forms.ComboBox();
+            this.cmbsecurity2 = new System.Windows.Forms.ComboBox();
+            this.cmbsecurity1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ename)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eemail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epass)).BeginInit();
@@ -67,6 +159,7 @@ namespace atm
             ((System.ComponentModel.ISupportInitialize)(this.essn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlnext.SuspendLayout();
             this.SuspendLayout();
             // 
             // dob
@@ -164,9 +257,9 @@ namespace atm
             this.lbssnno.ForeColor = System.Drawing.Color.Black;
             this.lbssnno.Location = new System.Drawing.Point(374, 521);
             this.lbssnno.Name = "lbssnno";
-            this.lbssnno.Size = new System.Drawing.Size(117, 22);
+            this.lbssnno.Size = new System.Drawing.Size(98, 22);
             this.lbssnno.TabIndex = 26;
-            this.lbssnno.Text = "SSN Number";
+            this.lbssnno.Text = "ID number";
             // 
             // lbssnt
             // 
@@ -176,9 +269,9 @@ namespace atm
             this.lbssnt.ForeColor = System.Drawing.Color.Black;
             this.lbssnt.Location = new System.Drawing.Point(374, 479);
             this.lbssnt.Name = "lbssnt";
-            this.lbssnt.Size = new System.Drawing.Size(91, 22);
+            this.lbssnt.Size = new System.Drawing.Size(80, 22);
             this.lbssnt.TabIndex = 25;
-            this.lbssnt.Text = "SSN Type";
+            this.lbssnt.Text = "ID proof";
             // 
             // lbgen
             // 
@@ -277,7 +370,7 @@ namespace atm
             // btnregister
             // 
             this.btnregister.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregister.Location = new System.Drawing.Point(506, 583);
+            this.btnregister.Location = new System.Drawing.Point(394, 534);
             this.btnregister.Name = "btnregister";
             this.btnregister.Size = new System.Drawing.Size(100, 28);
             this.btnregister.TabIndex = 38;
@@ -288,7 +381,7 @@ namespace atm
             // btnclear
             // 
             this.btnclear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(411, 583);
+            this.btnclear.Location = new System.Drawing.Point(506, 583);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(76, 28);
             this.btnclear.TabIndex = 39;
@@ -299,7 +392,7 @@ namespace atm
             // btncancel
             // 
             this.btncancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancel.Location = new System.Drawing.Point(625, 583);
+            this.btncancel.Location = new System.Drawing.Point(706, 583);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(86, 28);
             this.btncancel.TabIndex = 40;
@@ -335,7 +428,6 @@ namespace atm
             this.pictureBox1.Size = new System.Drawing.Size(1040, 90);
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
-            //this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lbhead1
             // 
@@ -360,6 +452,176 @@ namespace atm
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
             // 
+            // btnnext
+            // 
+            this.btnnext.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnext.Location = new System.Drawing.Point(600, 583);
+            this.btnnext.Name = "btnnext";
+            this.btnnext.Size = new System.Drawing.Size(86, 28);
+            this.btnnext.TabIndex = 44;
+            this.btnnext.Text = "NEXT";
+            this.btnnext.UseVisualStyleBackColor = true;
+            this.btnnext.Click += new System.EventHandler(this.btnnext_Click);
+            // 
+            // pnlnext
+            // 
+            this.pnlnext.Controls.Add(this.linklblrefresh);
+            this.pnlnext.Controls.Add(this.tbcaptcha);
+            this.pnlnext.Controls.Add(this.label6);
+            this.pnlnext.Controls.Add(this.lblcaptcha);
+            this.pnlnext.Controls.Add(this.tbanswer3);
+            this.pnlnext.Controls.Add(this.tbanswer2);
+            this.pnlnext.Controls.Add(this.tbanswer1);
+            this.pnlnext.Controls.Add(this.label3);
+            this.pnlnext.Controls.Add(this.label5);
+            this.pnlnext.Controls.Add(this.label2);
+            this.pnlnext.Controls.Add(this.label1);
+            this.pnlnext.Controls.Add(this.cmbsecurity3);
+            this.pnlnext.Controls.Add(this.cmbsecurity2);
+            this.pnlnext.Controls.Add(this.cmbsecurity1);
+            this.pnlnext.Controls.Add(this.btnregister);
+            this.pnlnext.Location = new System.Drawing.Point(12, 125);
+            this.pnlnext.Name = "pnlnext";
+            this.pnlnext.Size = new System.Drawing.Size(997, 587);
+            this.pnlnext.TabIndex = 45;
+            // 
+            // linklblrefresh
+            // 
+            this.linklblrefresh.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linklblrefresh.AutoSize = true;
+            this.linklblrefresh.LinkColor = System.Drawing.Color.Black;
+            this.linklblrefresh.Location = new System.Drawing.Point(291, 430);
+            this.linklblrefresh.Name = "linklblrefresh";
+            this.linklblrefresh.Size = new System.Drawing.Size(44, 13);
+            this.linklblrefresh.TabIndex = 54;
+            this.linklblrefresh.TabStop = true;
+            this.linklblrefresh.Text = "Refresh";
+            this.linklblrefresh.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblrefresh_LinkClicked);
+            // 
+            // tbcaptcha
+            // 
+            this.tbcaptcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbcaptcha.Location = new System.Drawing.Point(466, 418);
+            this.tbcaptcha.Name = "tbcaptcha";
+            this.tbcaptcha.Size = new System.Drawing.Size(154, 26);
+            this.tbcaptcha.TabIndex = 53;
+            this.tbcaptcha.Text = "Enter captcha here...";
+            this.tbcaptcha.Click += new System.EventHandler(this.tbcaptcha_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Chiller", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(341, 376);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 23);
+            this.label6.TabIndex = 52;
+            this.label6.Text = "CAPTCHA";
+            // 
+            // lblcaptcha
+            // 
+            this.lblcaptcha.AutoSize = true;
+            this.lblcaptcha.Font = new System.Drawing.Font("Mistral", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcaptcha.Location = new System.Drawing.Point(344, 421);
+            this.lblcaptcha.Name = "lblcaptcha";
+            this.lblcaptcha.Size = new System.Drawing.Size(70, 22);
+            this.lblcaptcha.TabIndex = 51;
+            this.lblcaptcha.Text = "lblcaptcha";
+            // 
+            // tbanswer3
+            // 
+            this.tbanswer3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbanswer3.Location = new System.Drawing.Point(277, 334);
+            this.tbanswer3.Name = "tbanswer3";
+            this.tbanswer3.Size = new System.Drawing.Size(384, 22);
+            this.tbanswer3.TabIndex = 50;
+            // 
+            // tbanswer2
+            // 
+            this.tbanswer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbanswer2.Location = new System.Drawing.Point(276, 239);
+            this.tbanswer2.Name = "tbanswer2";
+            this.tbanswer2.Size = new System.Drawing.Size(384, 22);
+            this.tbanswer2.TabIndex = 49;
+            // 
+            // tbanswer1
+            // 
+            this.tbanswer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbanswer1.Location = new System.Drawing.Point(277, 123);
+            this.tbanswer1.Name = "tbanswer1";
+            this.tbanswer1.Size = new System.Drawing.Size(384, 22);
+            this.tbanswer1.TabIndex = 48;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(236, 286);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 20);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "3)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(236, 183);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 20);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "2)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(236, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 20);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "1)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightGray;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(273, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 23);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "SECURITY QUESTIONS:";
+            // 
+            // cmbsecurity3
+            // 
+            this.cmbsecurity3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbsecurity3.FormattingEnabled = true;
+            this.cmbsecurity3.Location = new System.Drawing.Point(276, 285);
+            this.cmbsecurity3.Name = "cmbsecurity3";
+            this.cmbsecurity3.Size = new System.Drawing.Size(385, 24);
+            this.cmbsecurity3.TabIndex = 41;
+            // 
+            // cmbsecurity2
+            // 
+            this.cmbsecurity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbsecurity2.FormattingEnabled = true;
+            this.cmbsecurity2.Location = new System.Drawing.Point(276, 182);
+            this.cmbsecurity2.Name = "cmbsecurity2";
+            this.cmbsecurity2.Size = new System.Drawing.Size(385, 24);
+            this.cmbsecurity2.TabIndex = 40;
+            this.cmbsecurity2.Leave += new System.EventHandler(this.cmbsecurity2_Leave);
+            // 
+            // cmbsecurity1
+            // 
+            this.cmbsecurity1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbsecurity1.FormattingEnabled = true;
+            this.cmbsecurity1.Location = new System.Drawing.Point(276, 76);
+            this.cmbsecurity1.Name = "cmbsecurity1";
+            this.cmbsecurity1.Size = new System.Drawing.Size(385, 24);
+            this.cmbsecurity1.TabIndex = 39;
+            this.cmbsecurity1.Leave += new System.EventHandler(this.cmbsecurity1_Leave);
+            // 
             // Customer_Registration
             // 
             this.AcceptButton = this.btnregister;
@@ -367,14 +629,15 @@ namespace atm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1021, 712);
+            this.ClientSize = new System.Drawing.Size(1021, 713);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlnext);
+            this.Controls.Add(this.btnnext);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lbhead1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.btnclear);
-            this.Controls.Add(this.btnregister);
             this.Controls.Add(this.dob);
             this.Controls.Add(this.tbadd);
             this.Controls.Add(this.tbphone);
@@ -409,6 +672,8 @@ namespace atm
             ((System.ComponentModel.ISupportInitialize)(this.essn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlnext.ResumeLayout(false);
+            this.pnlnext.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,5 +711,24 @@ namespace atm
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbhead1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnnext;
+        private System.Windows.Forms.Panel pnlnext;
+        private System.Windows.Forms.TextBox tbanswer3;
+        private System.Windows.Forms.TextBox tbanswer2;
+        private System.Windows.Forms.TextBox tbanswer1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbsecurity3;
+        private System.Windows.Forms.ComboBox cmbsecurity2;
+        private System.Windows.Forms.ComboBox cmbsecurity1;
+        private System.Windows.Forms.TextBox tbcaptcha;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblcaptcha;
+        private System.Windows.Forms.LinkLabel linklblrefresh;
     }
 }
+Customer_Registration.Designer.csOpen
+2 of 3 items
+Customer_Registration.csCustomer_Registration.Designer.csCustomer_Registration.resxDisplaying Customer_Registration.cs.
