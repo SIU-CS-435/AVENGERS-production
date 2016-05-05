@@ -46,6 +46,7 @@ namespace atm.USER_FORMS
                 dt.Columns.Add("Reservation ID");
                 dt.Columns.Add("Flight Number");
                 dt.Columns.Add("Airlines");
+                dt.Columns.Add("Ticket Type");
                 dt.Columns.Add("Source");
                 dt.Columns.Add("Date Of Journey");
                 dt.Columns.Add("Departure time");
@@ -64,11 +65,17 @@ namespace atm.USER_FORMS
                     dr["Flight Number"] = sdr["F_NO"];
                     dr["Airlines"] = sdr["A_NAME"];
                     dr["Source"] = sdr["src"];
+                    dr["Ticket Type"] = sdr["Ticket_type"];
                     dr["Date Of Journey"] = sdr["DOJ"];
                     dr["Destination"] = sdr["dest"];
                     dr["Departure time"] = sdr["DEPART_TIME"];
                     dr["Price"] = sdr["Fare"];
-                    dr["Number Of Passengers"] = sdr["No_of_seats"];
+                    if (sdr["Ticket_type"].ToString() == "Economy")
+                    {
+                        dr["Number Of Passengers"] = sdr["No_of_seats_Economy"];
+                    }
+                    else
+                        dr["Number of Passengers"] = sdr["No_of_Business"];
                     dr["Passenger 1"] = sdr["Passenger1"];
                     dr["Passenger 2"] = sdr["Passenger2"];
                     dr["Passenger 3"] = sdr["Passenger3"];
@@ -83,7 +90,7 @@ namespace atm.USER_FORMS
                     Editlink.DataPropertyName = "lnkColumn";
                     Editlink.LinkBehavior = LinkBehavior.SystemDefault;
                     Editlink.Text = "Book";
-                    if (dgreservations.Columns.Count == 14)
+                    if (dgreservations.Columns.Count == 15)
                         dgreservations.Columns.Add(Editlink);
                 }
             }
@@ -102,9 +109,10 @@ namespace atm.USER_FORMS
 
         private void dgreservations_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             try
             {
-                if (e.ColumnIndex == 14)
+                if (e.ColumnIndex == 0)
                 {
                     DataGridViewRow row = dgreservations.CurrentCell.OwningRow;
                     var result = MessageBox.Show("Are you sure you want to book?", "Confirm", MessageBoxButtons.YesNo);
@@ -122,9 +130,9 @@ namespace atm.USER_FORMS
                             c = "1";
                         }
                         string bi = "B" + c;
-                        string q = "INSERT INTO BOOKING_INFO (BOOKING_ID,BOOKING_DT,F_NO,CID,PRICE,SEAT_BOOK,DOJ) VALUES('" + bi + "','" + DateTime.Now.ToShortDateString() + "','" + dgreservations.Rows[e.RowIndex].Cells[1].Value.ToString() + "'," + Convert.ToInt16(dt.Rows[0]["cid"]) + "," + dgreservations.Rows[e.RowIndex].Cells[7].Value.ToString() + "," + dgreservations.Rows[e.RowIndex].Cells[8].Value.ToString() + ",'" + dgreservations.Rows[e.RowIndex].Cells[4].Value.ToString() + "') ";
+                        string q = "INSERT INTO BOOKING_INFO (BOOKING_ID,BOOKING_DT,F_NO,CID,PRICE,SEAT_BOOK,DOJ,Passenger1,Passenger2,Passenger3,Passenger4,Passenger5) VALUES('" + bi + "','" + DateTime.Now.ToShortDateString() + "','" + dgreservations.Rows[e.RowIndex].Cells[2].Value.ToString() + "','" + Convert.ToInt16(dt.Rows[0]["cid"]) + "','" + dgreservations.Rows[e.RowIndex].Cells[9].Value.ToString() + "','" + dgreservations.Rows[e.RowIndex].Cells[10].Value.ToString() + "','" + dgreservations.Rows[e.RowIndex].Cells[6].Value.ToString() + "','" + dgreservations.Rows[e.RowIndex].Cells[11].Value.ToString()+ "','" + dgreservations.Rows[e.RowIndex].Cells[12].Value.ToString()+ "','" + dgreservations.Rows[e.RowIndex].Cells[13].Value.ToString()+ "','" + dgreservations.Rows[e.RowIndex].Cells[14].Value.ToString()+ "','" + dgreservations.Rows[e.RowIndex].Cells[15].Value.ToString()+ "') ";
                         dataaccess_layer.ProcessQuery(q);
-                        string q1 = "Delete from Reserve_Info where R_id='" + dgreservations.Rows[e.RowIndex].Cells[0].Value.ToString() + "'";
+                        string q1 = "Delete from Reserve_Info where R_id='" + dgreservations.Rows[e.RowIndex].Cells[1].Value.ToString() + "'";
                         dataaccess_layer.ProcessQuery(q1);
                         MessageBox.Show("Booking Successful");
                         this.Close();
